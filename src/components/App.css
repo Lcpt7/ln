@@ -1,0 +1,115 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 35, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 10px;
+}
+
+.search-icon {
+  color: rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #e0e0e0;
+  font-family: inherit;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.result-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 12px;
+  transition: background 0.1s;
+}
+
+.result-item.selected {
+  background: rgba(100, 150, 255, 0.15);
+}
+
+.result-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.result-item.selected:hover {
+  background: rgba(100, 150, 255, 0.2);
+}
+
+.result-icon {
+  color: rgba(255, 255, 255, 0.6);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+
+.result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.result-title {
+  font-size: 14px;
+  color: #e0e0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.result-subtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+.result-type {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+}
+
+.empty-hint {
+  padding: 40px 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+}
